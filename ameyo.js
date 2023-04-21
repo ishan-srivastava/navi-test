@@ -44,7 +44,7 @@ function handleOnLoad() {
 }
 
 function handleLoginStatus(status) {
-	console.log('__AMEYO__ : handleLoginStatus');
+	console.log('__AMEYO__ : handleLoginStatus', status);
 	var crmPage = document.getElementById('crmPage');
 	var html = "handleLoginStatus : " + status;
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
@@ -58,6 +58,7 @@ function handleForceLogin(reason) {
 }
 
 function handleSelectExtension(status, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleSelectExtension', status, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Select Extention : " + status + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -66,6 +67,7 @@ function handleSelectExtension(status, userCustomerCRTInfo) {
 }
 
 function handleModifyExtension(status, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleModifyExtension', status, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Modify Extention : " + status + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -74,6 +76,7 @@ function handleModifyExtension(status, userCustomerCRTInfo) {
 }
 
 function handleSelectCampaign(reason) {
+	console.log('__AMEYO__ : handleSelectCampaign', reason);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Select Campaign : " + reason;
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
@@ -87,18 +90,21 @@ function handleAutoCallOn(status) {
 }
 
 function handleAutoCallOff(status) {
+	console.log('__AMEYO__ : handleAutoCallOff', status);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Auto Call Off : " + status;
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
 }
 
 function handleReady(status) {
+	console.log('__AMEYO__ : handleReady', status);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Ready : " + status;
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
 }
 
 function handleBreak(status) {
+	console.log('__AMEYO__ : handleBreak', status);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Break : " + status;
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
@@ -107,6 +113,7 @@ function handleBreak(status) {
 
 
 function handleHangup(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleHangup', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Hangup : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -116,6 +123,7 @@ function handleHangup(reason, userCustomerCRTInfo) {
 
 
 function handleTransferToPhone(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleTransferToPhone', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Transfer to Phone : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -124,6 +132,7 @@ function handleTransferToPhone(reason, userCustomerCRTInfo) {
 }
 
 function handleTransferInCall(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleTransferInCall', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Transfer in Call : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -132,6 +141,7 @@ function handleTransferInCall(reason, userCustomerCRTInfo) {
 }
 
 function handleTransferToAQ(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleTransferToAQ', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Transfer to AQ : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -140,6 +150,7 @@ function handleTransferToAQ(reason, userCustomerCRTInfo) {
 }
 
 function handleTransferToIVR(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleTransferToIVR', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Transfer to IVR : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -148,6 +159,7 @@ function handleTransferToIVR(reason, userCustomerCRTInfo) {
 }
 
 function handleTransferToUser(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleTransferToUser', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Transfer to user : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -156,6 +168,7 @@ function handleTransferToUser(reason, userCustomerCRTInfo) {
 }
 
 function handleTransferToCampaign(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleTransferToCampaign', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Transfer to campaign : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -164,6 +177,7 @@ function handleTransferToCampaign(reason, userCustomerCRTInfo) {
 }
 
 function handleConferWithPhone(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleConferWithPhone', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Confer With Phone : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -196,12 +210,13 @@ function handleConferWithLocalIVR(reason, userCustomerCRTInfo) {
 }
 
 function getExtensionInfo(reason) {
+	console.log('__AMEYO__ : getExtensionInfo', reason);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Get Extension : " + reason;
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
 }
 function customCallDispose(userCustomerCRTInfo) {
-
+console.log('__AMEYO__ : customCallDispose', userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Hello.disposed <br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -212,6 +227,7 @@ function customCallDispose(userCustomerCRTInfo) {
 
 
 function handleDisposeAndDial(userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleDisposeAndDial', userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Dispose and dial completed <br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -231,6 +247,7 @@ function handleDisposeAndDial(userCustomerCRTInfo) {
 
 
 function showCrmDetailedCustom(recordInfo) {
+	console.log('__AMEYO__ : showCrmDetailedCustom', recordInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Record Id : " + recordInfo.recordId + "<br> User CRT info : "
 		+ recordInfo.userCustomerCRTInfo.userCrtObjectId
