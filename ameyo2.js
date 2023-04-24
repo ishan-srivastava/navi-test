@@ -1,4 +1,4 @@
-console.log('__AMEYO__ : script loaded');
+console.log('__AMEYO__ : script loaded v2');
 
 var setRecordForShowCrmCallback = function(response) {
 	if (response.result) {
@@ -186,6 +186,7 @@ function handleConferWithPhone(reason, userCustomerCRTInfo) {
 }
 
 function handleConferWithTPV(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleConferWithTPV', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Confer With TPV : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -194,6 +195,7 @@ function handleConferWithTPV(reason, userCustomerCRTInfo) {
 }
 
 function handleConferWithUser(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleConferWithUser', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Confer With User : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -202,6 +204,7 @@ function handleConferWithUser(reason, userCustomerCRTInfo) {
 }
 
 function handleConferWithLocalIVR(reason, userCustomerCRTInfo) {
+	console.log('__AMEYO__ : handleConferWithLocalIVR', reason, userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Confer With Local IVR : " + reason + "<br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -216,7 +219,7 @@ function getExtensionInfo(reason) {
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
 }
 function customCallDispose(userCustomerCRTInfo) {
-console.log('__AMEYO__ : customCallDispose', userCustomerCRTInfo);
+	console.log('__AMEYO__ : customCallDispose', userCustomerCRTInfo);
 	var crmPage = document.getElementById('crmPage');
 	var html = "Hello.disposed <br> User CRT info : "
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
@@ -233,6 +236,10 @@ function handleDisposeAndDial(userCustomerCRTInfo) {
 		+ userCustomerCRTInfo.userCrtObjectId + "<br> Customer CRT Info : "
 		+ userCustomerCRTInfo.customerCrtObjectId
 	crmPage.innerHTML = html + "<br>" + crmPage.innerHTML;
+}
+
+function intializeUI(params) {
+	console.log('__AMEYO__ : initializeUI', params);
 }
 
 
@@ -285,6 +292,7 @@ customIntegration.conferWithUserHandler = handleConferWithUser;
 customIntegration.conferWithLocalIVRHandler = handleConferWithLocalIVR;
 customIntegration.handleDisposeCall = customCallDispose;
 customIntegration.disposeAndDialHandler = handleDisposeAndDial;
+customIntegration.intializeUI = intializeUI;
 
 //customIntegration.disposeCall = customCallDispose;
 //customIntegration.disposeAndDialHandler = handleDisposeAndDial;
@@ -316,3 +324,4 @@ ameyo.integration.registerCustomFunction("conferWithLocalIVRHandler",customInteg
 ameyo.integration.registerCustomFunction("handleDisposeCall", customIntegration);
 ameyo.integration.registerCustomFunction("showCrmDetailed", customIntegration);
 ameyo.integration.registerCustomFunction("disposeAndDialHandler",customIntegration);
+ameyo.integration.registerCustomFunction("intializeUI",customIntegration);
